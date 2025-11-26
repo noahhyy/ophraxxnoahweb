@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background with blurred purple */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6a0dad, #9b30ff);
+  filter: blur(15px);
+  z-index: -1;
+}
+
+/* Main container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  margin-top: 80px;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.3);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Name */
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* About text */
+.about {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Quote */
+.quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  border-left: 5px solid #fff;
+  padding-left: 15px;
+}
+
+/* Music player */
+.music-player {
+  width: 100%;
+  max-width: 500px;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Add subtle animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .about {
+    font-size: 1rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}
